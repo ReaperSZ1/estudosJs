@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>carros</title>
+    <style>
+        body{
+            text-align: center;
+            background-color: rgb(161, 188, 238);
+        }
+        button{
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Carros</h1>
+    <div id="div1">
+        <p> Nome: <input type="text" id="nome"> </p>
+        <p> Portas: <input type="number" id="portas"> </p>
+        <!-- <p id="pB"> Blindagem: <input type="number" id="blindagem"> </p>
+        <p id="pM"> Munição: <input type="number" id="Municao"> </p> -->
+    </div>
+    <div>
+        Tipo: <br>
+        <input type="radio" id="normal" checked onclick="selecionar('#normal','#militar')"> Normal <br>  <!-- esse onclick para marcar -->
+        <input type="radio" id="militar" onclick="selecionar('#militar','#normal')"> Militar
+    </div>
+    <button onclick="adicionar()"> Adicionar</button>
+    <!-- <button onclick="Deletar()"> Deletar </button> <br> --> <br> 
+    ------------------------------------------------------------------------------ <br>
+    <div id="div2">
+
+    </div>
+    <script src="carros.js"></script>
+</body>
+</html>

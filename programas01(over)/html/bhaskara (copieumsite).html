@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bhaskara</title>
+    <style>
+        body{ 
+            background: rgb(170, 54, 8);
+            font: normal 15pt arial;
+         }
+        header {
+            color: white;
+            text-align: center;
+        }
+        section {
+            background: white;
+            border-radius: 100px;
+            padding: 15px;
+            width: 500px;
+            margin: auto;
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.377);
+        }
+        div {
+            text-align: center;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Fórmula de Bhaskara</h1>
+    </header>
+    <section>
+        <div>  DIGITE OS VALORES ABAIXO!
+            <p> A: <input type = "number" id = "a"> </p>
+            <p> B: <input type = "number" id = "b"> </p>
+            <p> C: <input type = "number" id = "c"> </p>
+            <p> <input type="button" value="Calcular" onclick="calcular()"> </p>
+        </div>
+        <div id = 'msg'></div>
+    </section>
+    
+    <script>
+        function calcular() {
+            let a = document.querySelector('#a')
+            let b = document.querySelector('#b')
+            let c = document.querySelector('#c')
+            let msg = document.querySelector('#msg')
+            a = a.value, b = b.value, c = c.value
+
+            let delta = (b**2) - (4 * a * c)
+            let negativo = (delta < 0) ? ' o Delta é negativo por isso não será possivel concluir o cálculo.' : ''
+            let raiz = b**2 - 4*a*c
+
+            msg.innerHTML = `<Strong>Δ = ${delta}</Strong></br>${negativo}`
+
+            if (delta >= 0){ 
+                let x1 = (-(b) +  Math.sqrt(raiz)) / (2*a)
+                let x2 = (-(b) -  Math.sqrt(raiz)) / (2*a)
+                msg.innerHTML += `X1 = ${x1.toFixed(2)} </br> X2 = ${x2.toFixed(2)}`
+            }
+        }
+    </script>
+</body>
+</html> 

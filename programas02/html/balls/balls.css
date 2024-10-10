@@ -1,0 +1,49 @@
+*{
+    border: none;
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+.controles{
+    display: flex;
+    justify-content: flex-start;
+    align-items: stretch;
+    width: 100%;
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+.controle{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    background-color: aliceblue;
+    border: 2px solid gray;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 5px;
+}
+button{
+    cursor: pointer;
+    background-color: rgb(216, 215, 215);
+    padding: 5px;
+    border-radius: 5px;
+}
+.palco{
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+    min-height: fill-available;
+    min-height: -webkit-fill-available;
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 5px;
+    position: absolute;
+    overflow: hidden;
+}
+.bola{
+    position: absolute;
+    border-radius: 100px;
+}

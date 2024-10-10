@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>idade</title>
+    <link rel="stylesheet" href="estilo(idade).css">
+</head>
+<body>
+    <header>
+        <h1>verificador de idade</h1>
+    </header>
+
+    <section>
+        <div>
+            <p> Ano de nascimento: <input type = "number" id = "ano" min = "0"> </p>
+            <p> Sexo: 
+                <input type="radio" name = "radsex" id = "masc" checked> 
+                <label for="masc"> Masculino </label> <!-- o label serve pra selecionar um texto em uma linha podendo colocar um ID-->
+                <input type="radio" name = "radsex" id = "femi"> 
+                <label for="femi"> Feminino </label>
+            </p>
+            <p><input type="button" value="verificar" onclick="verificar()"> </p>
+        </div>
+        <div id = 'msg'>Preencha os dados acima!</div>
+    </section>
+    <footer> </br> &copy; curso em video</footer>
+    <script src="code_aula(idade).js"></script>
+</body>
+</html>

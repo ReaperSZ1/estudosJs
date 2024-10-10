@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>relogio</title>
+    <style> 
+        body{
+            text-align: center;
+        }
+        button{
+            margin-top: 15px;
+        }
+        select{
+            margin-right: 60px;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>00:00:00</h1>
+    <p>
+        HORAS ---- MINUTOS ---- SEGUNDOS <br>
+        ㅤㅤㅤㅤ<select id="S1"></select> <select id="S2"></select> <select id="S3"></select> <br>
+        <button onclick="ativar()">ativar</button> <button onclick="desativar()">desativar</button> <br>
+        <div id="res"></div>
+        <div id="alarme"></div>
+    </p>
+    <script src="relogio.js"></script>
+</body>
+</html>

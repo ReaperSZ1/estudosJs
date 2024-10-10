@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aluguel de carros</title>
+</head>
+<body>
+    <h1>UNLOCK Cars</h1>
+    <p> Qual foi o tipo de carro alugado? 
+        <input type = "button" value = "POPULAR" id="popular">
+        <input type = "button" value = "LUXO" id="luxo"> 
+    </p>
+    <div id="div"></div>
+    <p id = "final"></p>
+    <script>
+        function p_1(){
+            const p1 = document.createElement('p') 
+            p1.innerHTML = 'Digite o número de dias de aluguel: ' 
+            div.appendChild(p1)
+            
+            const input1 = document.createElement('input')
+            input1.setAttribute('type', 'number')
+            input1.setAttribute('id', 'num_dias')
+            p1.appendChild(input1)
+        } // cria o elemeto P e o elemento input dos dias
+        function p_2(){
+            const p2 = document.createElement('p')
+            p2.innerHTML = 'Digite a quilômetragem:  ' 
+            div.appendChild(p2)
+            
+            const input2 = document.createElement('input')
+            input2.setAttribute('type', 'number')
+            input2.setAttribute('id',  'num_km')
+            p2.appendChild(input2)
+        } // cria o elemeto P e o elemento input da kilometragem
+        function input_3(){
+            const input3 = document.createElement('input')
+            input3.setAttribute('type', 'button')
+            input3.setAttribute('value', 'Calcular')
+            input3.setAttribute('onclick', 'botao()')
+            div.appendChild(input3)
+        } // cria o terceiro input botao para calcular o aluguel
+        const input_popular = document.querySelector('#popular') 
+        const input_luxo = document.querySelector('#luxo')
+        const final = document.querySelector('#final')
+        const div = document.querySelector('#div')
+        
+        let verif_popular = false
+        let verif_luxo = false
+        let verif_clicks = 0
+
+        input_popular.addEventListener('click', () => { 
+            input_luxo.remove() //remove o outro botao
+            verif_clicks++
+            if(verif_clicks == 1){ 
+                p_1()
+                p_2()
+                input_3()
+            }
+            return verif_popular = true
+        })
+        input_luxo.addEventListener('click', () => { 
+            input_popular.remove() //remove o outro botao
+            verif_clicks++
+            if(verif_clicks == 1){
+                p_1()
+                p_2()
+                input_3()
+            }
+            return verif_luxo = true
+        })
+
+
+        function botao() {
+            let num_dias = document.querySelector('#num_dias')
+            let num_km = document.querySelector('#num_km')
+            let resto = 0 
+            let calculo = 0 
+            
+            num_dias = num_dias.value
+            num_km = num_km.value
+            
+            final.innerHTML = ''
+            
+            if(verif_popular) { 
+                if (num_km <= 100) {
+                    calculo = (num_dias * 90) + (num_km * 0.20)
+                    final.innerHTML += `o Valor a ser pago é ${calculo} Reais`
+                } else {
+                    resto = num_km - 100
+                    num_km = 100
+                    calculo = (num_dias * 90) + (num_km *  0.20)  + (resto * 0.10)
+                    final.innerHTML += `o Valor a ser pago é ${calculo} reais`
+                }
+            } else 
+            if(verif_luxo){
+                if (num_km <= 200) {
+                    calculo = (num_dias * 150) + (num_km * 0.3)
+                    final.innerHTML += `o Valor a ser pago é ${calculo} Reais`
+                } else {
+                    resto = num_km - 200
+                    num_km = 200
+                    calculo = (num_dias * 150) + (num_km * 0.30) + (resto * 0.25)
+                    final.innerHTML += `o Valor a ser pago é ${calculo} reais`
+                }
+            }
+
+    /* 
+35) Uma empresa de aluguel de carros precisa cobrar pelos seus serviços. O 
+aluguel de um carro custa R$90 por dia para carro popular e R$150 por dia para 
+carro de luxo. Além disso, o cliente paga por Km percorrido. Faça um programa
+que leia o tipo de carro alugado (popular ou luxo), quantos dias de aluguel e 
+quantos Km foram percorridos. No final mostre o preço a ser pago de acordo com a 
+tabela a seguir:
+ - Carros populares (aluguel de R$90 por dia)
+ - Até 100Km percorridos: R$0,20 por Km
+ - Acima de 100Km percorridos: R$0,10 por Km
+ - Carros de luxo (aluguel de R$150 por dia)
+ - Até 200Km percorridos: R$0,30 por Km
+ - Acima de 200Km percorridos: R$0,25 por Km
+*/ // problema do escopo resolvido krl!
+        }
+    </script>
+    
+</body>
+</html>

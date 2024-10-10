@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analisador</title>
+    <style>
+      header{
+        text-align: center;
+        color: white
+      }
+      body{
+        background-color: rgb(6, 97, 97);
+        font: normal 15pt arial;
+      }
+      section{
+        background-color: white;
+        border-radius: 100px;
+        padding: 15px;
+        margin: auto;
+        width: 500px;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.377);
+      }
+      div{
+        text-align: center;
+        padding: 10px;
+      }
+      select{
+          width: 150px;
+      }
+    </style>
+</head>
+<body>
+    <header>   
+        <h1>Analisador de Valores</h1> 
+    </header>
+    <section>
+        <div>
+            Digite um Valor: <input type = "number" id = "numero"> 
+            <input type = "button" value = "Adicionar" onclick = "adicionar()"> 
+        </div>
+        <div id="d1">
+            <select id="select" size="6"></select> </br>
+            <input type="button" value="finalizar" onclick="finalizar()">
+        </div> 
+        <div id="Resposta"></div>
+    </section> 
+<script>    
+    let Valores = document.querySelector('#numero')
+    let Resposta = document.querySelector('#Resposta')
+    let select = document.querySelector('#select')
+    let c = 0, Soma = 0, media = 0
+    let number = []
+
+    function adicionar(){
+        if(Valores.value.length == 0) {
+            alert('[ERRO] Digite um Valor!')
+        } else if(number.indexOf(Number(Valores.value)) != -1) {
+            alert('[ERRO] os Valores não podem se repetir!')
+        } else {
+            number[c] = Number(Valores.value)
+            const option = document.createElement('option')
+            option.innerText = `O valor ${number[c]} foi adicionado!`
+            select.appendChild(option)
+
+            Soma += number[c]
+            Resposta.innerHTML = ''
+            Valores.value = ''
+            Valores.focus()
+            c++
+        } 
+    }
+    function finalizar(){
+        if(select.innerHTML == '') { 
+            alert('[ERRO] Adicione um Valor antes de finalizar!')
+        } else {
+            const maior = Math.max(...number)
+            const menor = Math.min(...number)
+            media = Soma / number.length
+            Resposta.innerHTML = ''
+            Resposta.innerHTML += `<p>ao todo temos ${number.length} Valores cadastrados<p>`
+            Resposta.innerHTML += `<p>O maior valor digitado foi: ${maior}<p>`
+            Resposta.innerHTML += `<p>O menor valor digitado foi: ${menor}<p>`
+            Resposta.innerHTML += `<p>A soma Soma dos Valores é: ${Soma}<p>`
+            Resposta.innerHTML += `<p>A média de todos os Valores é: ${media.toFixed(1)}<p>`
+        }
+    }
+</script>
+</body>
+</html> 

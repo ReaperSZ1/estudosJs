@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: brown;
+            font: normal 15pt arial;
+        }
+        header {
+            text-align: center;
+            color: white;
+        }
+        section { 
+            border-radius: 100px;
+            background: white;
+            padding: 15px;
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.322);
+            margin: auto;
+            width: 500px;
+        }
+        div {
+            text-align: center;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Identificador de triângulo</h1>
+    </header>
+
+    <section>
+        <div> DIGITE OS VALORES ABAIXO!
+            <P> A: <input type = "number" id = "a"> </P>
+            <P> B: <input type = "number" id = "b"> </P>
+            <P> C: <input type = "number" id = "c"> </P>
+            <input type = "button" value = "Identificar" onclick = "botao()">
+            <p id = "res"></p>
+        </div> 
+    </section>
+<script>
+    function botao(){
+        const res = document.querySelector('#res')
+        let n1 = document.querySelector('#a') 
+        let n2 = document.querySelector('#b') 
+        let n3 = document.querySelector('#c') 
+        n1 = Number(n1.value), n2 = Number(n2.value), n3 = Number(n3.value)
+
+        let a = ((n1 + n2) > n3)? 1 : 0
+        let b = ((n1 + n3) > n2)? 1 : 0
+        let c = ((n2 + n3) > n1)? 1 : 0
+
+        if (a + b + c == 3) {
+            res.innerHTML = `isso é um <strong>TRIÂNGULO!</strong> `
+            if (n1 == n2 && n2 == n3 && n1 == n3){
+                res.innerHTML += 'E é um triângulo <strong>EQUILÁTERO</strong>'
+            } else {
+                if (n1 != n2 && n2 != n3 && n1 != n3){
+                    res.innerHTML += 'E é um triângulo <strong>ESCALENO</strong>'
+                } else { 
+                    res.innerHTML += 'E é um triângulo <strong>ISÓCELES</strong>'
+                }
+            }
+        } else {
+            res.innerHTML = ` isso <strong>NÃO!</strong> é um triângulo `
+        }
+}
+</script>
+</body>
+</html>

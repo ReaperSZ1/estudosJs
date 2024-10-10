@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tabuada</title>
+    <style>
+      header{
+        text-align: center;
+        color: white
+      }
+      body{
+        background-color: rgb(6, 97, 97);
+        font: normal 15pt arial;
+      }
+      section{
+        background-color: white;
+        border-radius: 100px;
+        padding: 15px;
+        margin: auto;
+        width: 400px;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.377);
+      }
+      div{
+        text-align: center;
+      }
+    </style>
+</head>
+<body>
+    <header>  
+        <h1>la tabueida</h1>  
+    </header>
+    <section>
+        <div> 
+            <p id = 'p1'>DIGITE UM NÚMERO</p>
+            <p>
+                <input type = "number" id = "numero">
+                <input type = "button" value = "calcular" onclick = "calcular()"> 
+            </p>
+        </div> 
+        <div id= "div1"></div>
+        <div id= "div2"></div> 
+    </section> 
+<script>        
+    function calcular(){
+        let numero = document.querySelector('#numero')
+        let div1 = document.querySelector('#div1')
+        let div2 = document.querySelector('#div2')
+        let p1 = document.querySelector('#p1')
+            div1.innerHTML = ''
+            div2.innerHTML = ''
+          
+            
+        if (numero.value.length == 0) {
+            alert('DIGITE UM NÚMERO')  
+        } else {
+        let select = document.createElement('select')
+            select.setAttribute('size', '10')
+            div2.appendChild(select)
+
+            if(p1) { p1.remove() } // verifica se o elemento existe se existir ele remove
+            
+            numero = Number(numero.value)
+            div1.innerHTML = '<strong>RESULTADO</strong>'
+
+            for(c = 1; c <= 10; c++){
+                let option = document.createElement('option')
+                option.innerText += `${numero} X ${c} = ${numero * c}`
+                select.appendChild(option)
+            }
+        } 
+      }
+</script>
+</body>
+</html> 

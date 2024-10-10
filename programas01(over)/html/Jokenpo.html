@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JOKENPO</title>
+    <style>
+        body{
+            background-color: chocolate;
+        }
+        h1{
+            text-align: center;
+            background-color: white;
+            
+        }
+        p{
+            text-align: center;
+            background-color: rgb(158, 186, 247);
+        }
+        .win{
+            background-color: rgb(143, 247, 143);
+        }
+        .lose{
+            background-color: rgb(248, 132, 132);
+        }
+    </style>
+</head>
+<body>
+    <h1>JOKENPO!</h1>
+    <p> 
+        Escolha: 
+        <input type = "button" value = "PEDRA" onclick = "pedra()">
+        <input type = "button" value = "PAPEL" onclick = "papel()">
+        <input type = "button" value = "TESOURA" onclick = "tesoura()">
+    </p>
+    <p id = "res"></p>
+
+    <script>
+        const opcoes = ['Pedra', 'Papel', 'Tesoura']
+        const res = document.querySelector('#res')
+        
+        let final = 0 
+        let robo = 0
+        let n1 = 0 
+        
+        const win_lose = (robot, resultado) => {
+            resultado == 'VENCEU!' ? res.classList.add('win') : res.classList.add('lose')
+            return `ROBO: Eu jogo <strong>${robot}</strong>! </br> Você <strong>${resultado}</strong>`
+        }
+
+        function pedra() {
+            robo = opcoes[Math.floor(Math.random() * opcoes.length)]
+            res.className = ""
+            n1 = 'pedra'
+            
+            if(robo == 'Tesoura')
+                final = win_lose(robo, 'VENCEU!')
+            else if((robo == 'Papel'))
+                final = win_lose(robo, 'PERDEU!')
+
+            res.innerHTML  = (robo.toUpperCase() == n1.toUpperCase()) ? 'Deu <strong>EMPATE!</strong>' : final;
+        }
+        function papel(){
+            robo = opcoes[Math.floor(Math.random() * opcoes.length)]
+            res.className = ""
+            n1 = 'papel'
+
+            if(robo == 'Pedra')
+                final = win_lose(robo, 'VENCEU!')
+            else if((robo == 'Tesoura'))
+                final = win_lose(robo, 'PERDEU!')
+            
+            res.innerHTML  = (robo.toUpperCase() == n1.toUpperCase()) ? 'Deu <strong>EMPATE!</strong>' : final;
+        }
+        function tesoura(){
+            robo = opcoes[Math.floor(Math.random() * opcoes.length)]
+            res.className = ""
+            n1 = 'tesoura'     
+
+            if(robo == 'Papel')
+                final = win_lose(robo, 'VENCEU!')
+            else if((robo == 'Pedra'))
+                final = win_lose(robo, 'PERDEU!')
+
+            res.innerHTML  = (robo.toUpperCase() == n1.toUpperCase()) ? 'Deu <strong>EMPATE!</strong>' : final; 
+        }
+    </script>
+</body>
+</html>

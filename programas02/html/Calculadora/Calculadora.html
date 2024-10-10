@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculadora basica</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/10.3.0/math.js"></script>
+    <style>
+        body{
+            text-align: center;
+            padding: 5px;
+            background-color: darkgreen;
+        }
+        div{
+            padding: 2px;
+        }
+        h1{
+            color: aliceblue;
+        }
+        button{
+            width: 30px; /* largura fixa para todos os botões */
+            height: 30px; /* altura fixa para todos os botões */
+            font-size: 14px; /* tamanho da fonte para o texto do botão */
+        }
+    </style>
+</head>
+<body>
+                                        <H1>CALCULADORA</H1>
+    <input type="text" id="input" readonly> <!-- esse readonly não permite que o usuario digite -->
+    <button onclick="del()">⌫</button> 
+    <button onclick="delAll()">DL</button>
+    <div> </br>
+       <div>
+            <button onclick="input(this)" id="btn">1</button> 
+            <button onclick="input(this)" id="btn">2</button> 
+            <button onclick="input(this)" id="btn">3</button> 
+            <button onclick="input(this)" id="btn">+</button> 
+       </div>
+       <div>
+            <button onclick="input(this)" id="btn">4</button>
+            <button onclick="input(this)" id="btn">5</button>
+            <button onclick="input(this)" id="btn">6</button> 
+            <button onclick="input(this)" id="btn">-</button> 
+       </div>
+       <div>
+            <button onclick="input(this)" id="btn">7</button>
+            <button onclick="input(this)" id="btn">8</button>
+            <button onclick="input(this)" id="btn">9</button> 
+            <button onclick="input(this)" id="btn">X</button> 
+       </div>
+       <div>
+            <button onclick="input(this)" id="btn">,</button> 
+            <button onclick="input(this)" id="btn">0</button> 
+            <button onclick="igual()"> = </button> 
+            <button onclick="input(this)" id="btn">/</button>  
+       </div>
+    </div>
+    <script src="calculadora.js"></script>
+</body>
+</html>

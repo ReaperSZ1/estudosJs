@@ -1,0 +1,547 @@
+{\rtf1\fbidis\ansi\ansicpg1252\deff0\nouicompat\deflang1046{\fonttbl{\f0\fnil\fcharset0 Calibri;}{\f1\fnil\fcharset0 Georgia;}{\f2\fnil\fcharset1 Segoe UI Emoji;}{\f3\fnil Calibri;}{\f4\fnil\fcharset1 Cambria Math;}{\f5\fnil\fcharset0 Cascadia Mono;}{\f6\fnil Georgia;}{\f7\fnil\fcharset2 Symbol;}}
+{\colortbl ;\red0\green0\blue255;\red255\green0\blue0;\red0\green77\blue187;\red192\green80\blue77;\red255\green192\blue0;\red247\green150\blue70;\red102\green102\blue102;\red165\green165\blue165;\red75\green172\blue198;}
+{\*\generator Riched20 10.0.19041}{\*\mmathPr\mmathFont4\mwrapIndent1440 }\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\qc\b\i\f0\fs32\lang22 JAVASCRIPT E NODE.JS\par
+\b0\i0\fs22 use o site {{\field{\*\fldinst{HYPERLINK https://emojipedia.org/ }}{\fldrslt{https://emojipedia.org/\ul0\cf0}}}}\f0\fs22  para encontrar emojis e colocar no seu c\'f3digo\par
+=======================================================================\par
+\ul\b\i\fs28 EXTENS\'d5ES\par
+
+\pard\sa200\sl276\slmult1\ulnone\b0\i0\fs22 Color Picker, Dracula, Error Lens, Live Server, Node.js Exec, Portuguese, Quokka, vscode-pdf, vscode icons\b\i\fs32\par
+
+\pard\sa200\sl276\slmult1\tx1278\b0\i0\fs22 ===========================================================================\par
+
+\pard\sa200\sl276\slmult1\qc\tx1278\ul\b\i\fs28 COMANDOS\par
+
+\pard\sa200\sl276\slmult1\cf2\ulnone\b0\i0\f1\fs20 const read = require('readline-sync') \cf0 // importante // serve para entrada de dados no node\par
+\cf2 setInterval(clock, 1000) \cf0 // use isso para chamar uma fun\'e7\'e3o varias vezes, clock \'e9 a fun\'e7\'e3o\par
+\cf2 setTimeout(function, delay, arg1, arg2, ...); \cf0 // s\'f3 roda uma vez diferente do setinterval\par
+shift + tab // volta um tab para tras o texto (desindentar)\par
+\f0\fs22 alt + \f2\u11015?\u-497?\f3\lang1046  \f0 // desliza o texto para baixo\par
+Ctrl + L // seleciona toda uma linha \cf2\lang22\par
+"use strict" \cf0 //modo restrito\par
+ctrl + ; // comenta tudo que foi selecionado\par
+alt + shift + \f4\u8595?\f3\lang1046  \f0 // copia a linha e manda para baixo\par
+\cf2\lang22 <br/> \cf0 html,  \cf2\\n \cf0 Js // quebrar linha \par
+\cf2 alert('jooj') \cf0 // mostra jooj na tela\par
+\cf2 document.write('<h1>Ol\'e1, Mundo!</h1>'); \cf0 // permite adicionar diretament esse str no html\par
+\cf2 window.confirm\cf0 ('esta gostando de js?'): pede uma confirma\'e7\'e3o que retorna true ou false\par
+\cf2 window.prompt\cf0 ('qual \'e9 o seu nome?', 'bruno'): usuario digita, comeca com bruno(opcional)\par
+
+\pard\sa200\sl276\slmult1\tx1278\cf2 `\\u\{1F449\}` \cf0 // \cf2\\u\{\} \cf0 serve pra colocar emojis em js, remova o u+, e s\'f3 funciona dentro de crases.\par
+\cf2 <input type="text" id="input" \cf3 readonly\cf2 >  \cf0 // n\'e3o permite que o usuario digite no input (html)\par
+\cf2 console.log(n1 + '' + n2) \cf0 // concatena\par
+\cf2 <link rel="stylesheet" href="estilo.css"> \cf0 // link de um arquivo css com seu nome\cf2\par
+<script src="code_aula.js"></script> \cf0 // link de um arquivo js com seu nome\par
+\cf2 process.exit() \cf0 // para parar a execu\'e7\'e3o do codigo no programa\par
+\cf2 process.stdout.write() \cf0 //use esse codigo para n\'e3o quebrar a linha quando imprimir em node\par
+\cf2 .innertext //\cf0 serve pra passar um valor em texto pra um elemento html por exemplo\par
+\cf2 n1.focus() \cf0 // use isso para voce poder clicar no input mais rapidamente\par
+\cf2 inicio.value.length  == 0 \cf0 // use isso para usar uma condi\'e7\'e3o onde o usuario n\'e3o digitou algo\par
+
+\pard\sa200\sl240\slmult1\tx1278\cf2 Math.min(...jooj) \cf0 e \cf2 Math.max(...jooj) \cf0 // traz o maior e menor valor dentro de um array\par
+\cf2  caixa.insertBefore(novoElemento,jooj) \cf0 // o novo elemento ser\'e1 adicionado antes de jooj dentro de caixa.\par
+\cf2  if(p) p.remove() \cf0 // verifica se o elemento existe caso exista ele remove\f1\fs20\par
+\cf2\fs22 console.clear() // \cf0\f0 para limpar o terminal\par
+\cf2\f1 variavel.trim() \cf0 // retorna o valor da variavel sem espa\'e7os antes e depois do texto\par
+\cf2\f0 isNaN(valor) // \cf0 Converte o valor para n\'famero e depois verifica se \'e9 NaN. \f1\par
+\cf2\f0 !isNaN(jooj)) \cf0 // use isso para verificar se o valor n\'e3o \'e9 NaN \par
+\cf2 math.evaluate('5 + 3') \cf0 // esse comando serve para calcular esse valor estando em striing\par
+\cf2 <script src="{\cf0{\field{\*\fldinst{HYPERLINK https://cdnjs.cloudflare.com/ajax/libs/mathjs/10.3.0/math.js }}{\fldrslt{https://cdnjs.cloudflare.com/ajax/libs/mathjs/10.3.0/math.js\ul0\cf0}}}}\f0\fs22 "></script> \cf0 // use isso para usar o math evaluate\par
+DICA: visualize o escopo pela l\'f3gica de camadas em que o let s\'f3 pode ser chamado da camada atual para cima e nunca para baixo\par
+\f1\fs20 DICA: if n\'e3o precisa de chaves \{\} se o resultado estiver apenas em uma linha\par
+
+\pard\sa200\sl276\slmult1 DICA: \f0\fs22 se voce estiver em um arquivo dentro de uma pasta e quer acessar um arquivo fora dela utilize \cf2 ../\cf0  e o endere\'e7o do arquivo\par
+DICA: Para encontrar o arquivo dentro de uma pasta pelo node ex.  \cf2 node Js/calculadora_infinita.js \par
+\cf0 O event.preventDefault()m\'e9todo \'e9 usado para impedir a a\'e7\'e3o padr\'e3o de um evento. Por exemplo, quando voc\'ea clica em um link, a a\'e7\'e3o padr\'e3o \'e9 navegar at\'e9 a URL do link. Mas, se voc\'ea quiser impedir a navega\'e7\'e3o, voc\'ea pode usar event.preventDefault()o m\'e9todo.\f1\fs20\par
+
+\pard\sa200\sl240\slmult1\qc\tx1278\ul\b\i\f0\fs24 aleatorio em js \ulnone\b0\i0\f1\fs20\par
+
+\pard\sa200\sl276\slmult1\tx1278\tx1420\cf2\f5\fs18 Math.Random() * \cf3 at\'e9 um numero x\f0\fs22 . \cf0 //Sintaxe\par
+OBS: o numero sempre comeca em 0 e vai ate 0,999...  \cf3\par
+\cf0 use o \f5\fs18 Floor(\cf2 Math.Random()\cf0 ), \f0\fs22 para arredondar para baixo\par
+\'e9 possivel usar arrays para sortear uma string:\par
+\cf2\f5\fs18 var opcoes = ['Pedra', 'Papel', 'Tesoura']\par
+console.log(opcoes[Math.floor(Math.random() * opcoes.length)])\par
+
+\pard\sa200\sl276\slmult1\qc\tx1278\tx1420\cf0\ul\b\i\f0\fs24 DATE\cf2\ulnone\b0\i0\f5\fs18\par
+
+\pard\sa200\sl276\slmult1\tx1278\tx1420\cf0\f0\fs22 atribua a uma variavel o metodo \cf2 new date() \cf0 e encontre valores de horas e datas: \par
+\cf2\f5\fs18 var agora = new Date() console.log(agora..getHours()) \cf0\f0\fs22 //ele vai imprimir a hora atual\par
+\cf2 var data = new Date(), var horas = data.getHours() \cf0 //horas, datas, etc..em tempo real\par
+\cf2 console.log(data.toLocaleTimeString()) \cf0 // 18:58:13\par
+\cf2 console.log(data.toLocaleDateString()) \cf0 // 20/08/2024\par
+\cf2 console.log(data.toLocaleString()) \cf0 // 20/08/2024, 18:58:13\par
+\cf2 ts_atual = Date.now() \cf0 // isso pega o timestamp atual\par
+\cf2 let alarme = ts_atual + (segs * 1000) \cf0 // isso forma um novo timestamp e poe em alarme\par
+\cf2 data = new Date(alarme) \cf0 // essa nova instancia recebe o novo timestamp ao inv\'e9s do atual\par
+
+\pard\sa200\sl276\slmult1\qc\tx1278\ul\b\i\fs24 ADDEVENTLISTENER\ulnone\b0\i0\fs22\par
+
+\pard\sa200\sl276\slmult1\tx1278\cf2\f1\fs18 c1.addEventListener('click', alert('clicou')) \cf0 // adiciona eventos no html pelo js\par
+\cf2 c1.addEventListener('click', () => alert('clicou')) \cf0 // pode tambem usar uma fun\'e7ao\par
+para mais detalhes: {{\field{\*\fldinst{HYPERLINK https://abre.ai/kfC1 }}{\fldrslt{https://abre.ai/kfC1\ul0\cf0}}}}\f1\fs18\par
+\cf2 botao.addEventListener('click',(evento) => evento.stopPropagation()) \cf0 // imagine, voc\'ea tem um \cf2 p \cf0 dentro de uma \cf2 div\cf0 , e voc\'ea que selecionar com clique a \cf2 div \cf0 por\'e9m ao clicar em \cf2 p \cf0 voc\'ea esta clicando em \cf2 div\cf0 , para separar isso voc\'ea deve usar o metodo \cf2 stopP\cf0 . esse \cf2 evento \cf0\'e9 o evento retornado no clique\par
+\cf2 evento.target \cf0 // retorna o elemento que sofreu a a\'e7\'e3o (click...)\par
+\cf2\f0\fs22 p.remove() \cf0 // remove o elemento p\f1\fs18\par
+
+\pard\sa200\sl240\slmult1\tx1278 -----------------------------------------------------------------------------------------------------------------\par
+
+\pard\sa200\sl240\slmult1\qc\tx1278\ul\b\i\f0\fs24 TRY ... CATCH\par
+
+\pard\sa200\sl240\slmult1\tx1278\ulnone\b0\i0\fs22 o try catch serve para voc\'ea isolar do c\'f3digo principal um peda\'e7o de codigo que tenha um potencial em retornar um erro e n\'e3o travar a execu\'e7\'e3o do programa por causa daquele erro.\par
+\ul\b\i\fs24 para saber mais: {\ulnone\b0\i0\fs22{\field{\*\fldinst{HYPERLINK https://youtu.be/PknztTlBGUk?si=UP8-gorHJuJJkl1b }}{\fldrslt{https://youtu.be/PknztTlBGUk?si=UP8-gorHJuJJkl1b\ul0\cf0}}}}\ulnone\b0\i0\f0\fs22\par
+\f1\fs18 ------------------------------------------------------------------------------------------------------------------- \par
+
+\pard\sa200\sl240\slmult1\qc\tx1278\ul\b\i\f0\fs22 CLASS\cf2\ulnone\b0\i0\par
+
+\pard\sa200\sl240\slmult1\tx1278 curso.classList.add('jooj') \cf0 // ele vai adicionar a classe \cf2 jooj \cf0 a variavel \cf2 curso\par
+res.classList.remove('jooj') \cf0 // remove a classe jooj\cf2\par
+res.className = "" \cf0 // remove todas as classes\par
+\cf2 .toogle \cf0 // ele adiciona uma classe ap\'f3s um clique e se clicar denovo ele remove\par
+
+\pard\sa200\sl276\slmult1\tx1278 ------------------------------------------------------------------------------------------------------------------\par
+
+\pard\sa200\sl276\slmult1\qc\tx1278\ul\b\i\fs28 MANIPULA\'c7\'c3O DE VARI\'c1VEIS\ulnone\b0\i0\fs22\par
+
+\pard\sa200\sl276\slmult1\cf2 typeof nome == 'string' \cf0 // identifica se a var nome \'e9 uma string\par
+\cf2\f1\fs18 console.log(typeof n1 == 'number' && !isNaN(n1)) \cf0\f0\fs22 // verifica se \'e9 um numero e se \'e9 n\'e3o \'e9 NaN\par
+
+\pard\sa200\sl276\slmult1\tx1278\cf2 parseFloat, parseInt ou number //\cf0 transforma string em number e/ou float\par
+\cf2 String() ou .toString(): \cf0 transforma numero em string\cf2  \par
+this.variavel \cf0 // \cf2 this \cf0 cria uma variavel em que s\'f3 \'e9 criado dentro daquele objeto especifico ou em uma fun\'e7\'e3o \fs20\par
+\cf2 let arr = [1, 2, 3, 4, 5]; \cf0 // o slice pode servir tanto para string quanto para array\par
+\cf2 let fatia = arr.slice(1, 3);  \cf0 // Extrai os elementos do \'edndice 1 at\'e9 o \'edndice 3 (n\'e3o incluindo o \'edndice 3)      // Sa\'edda: [2, 3]\par
+
+\pard\sa200\sl240\slmult1\tx1278\cf2\fs22 let count = .jooj || 0; \cf0 // isso verifica se jooj  existe ou n\'e3o caso nao exista ele retornaria undefined ao inv\'e9s disso ele retorna zero\par
+\cf2 let myString = "Hello";\par
+let myArray = myString.split(''); \cf0 // transforma texto em array\par
+\cf2 console.log(myArray); \cf0 // ["H", "e", "l", "l", "o"]\par
+\cf2 arr = Array.from(arr) \cf0 // transforma varias coisas em array como, var, nodelists etc...\par
+
+\pard\sa200\sl276\slmult1\tx1278 ==========================================================================\par
+
+\pard\sa200\sl276\slmult1\qc\tx1278\ul\b\i\fs28 ARRAY\ulnone\b0\i0\fs22\par
+
+\pard\sa200\sl276\slmult1\tx1278\cf2 let arr = Array(5);  \cf0 // Cria um array com 5 posi\'e7\'f5es vazias\par
+\cf2 const result = [1, 2, 3, 4]; \cf0 // o join transforma array em texto e pode usar um separador\par
+\cf2 console.log(result.join(" -> ")); \cf0 // Sa\'edda: "1 -> 2 -> 3 -> 4" \cf2\par
+array.length \cf0 // se usarmos length em um array, ele conta o quantidade de elementos.\par
+\cf2 Arr.sort((a, b) => a - b)\cf0 // organiza os valores numericos em ordem crescente no array.\par
+\cf4 num.indexOf(7) \cf0 // procura o valor 7 em uma str ou array e retorna a posi\'e7\'e3o caso n\'e3o encontre ele retorna -1\par
+\cf4 'hello world'.indexOf('world') \cf0 // 6, \'e9 possivel tambem encontrar strings \par
+
+\pard\sa200\sl240\slmult1\tx1278 // o M\'e9todo \cf2 Find \cf0 serve pra encontrar os valores de um array que atendam uma condi\'e7\'e3o\par
+\cf2\f1\fs20 let arr = [1, 2, 3, 4, 5];  arr.find((e) => if (e == 2) return e \cf0\fs22 // retorna o elemento\cf2\fs20\par
+let found = arr.find(element => element > 3);  \cf0\f0\fs22 // retorna 4\par
+// o M\'e9todo \cf2 every \cf0 verifica se todos os arrays satisfa\'e7am uma condi\'e7\'e3o\par
+\cf2\f1\fs20 let arr = [1 ,20 ,30]\par
+console.log(arr.every((e, i) => \{return e >= 18\} )) \cf0\f0\fs22 // retorna false\par
+// Metodo \cf2 some \cf0 precisa de pelo menos um elemento que cumpra uma condi\'e7\'e3o\par
+\cf2\f1\fs20 console.log(arr.some((e, i) => \{ return e >= 18 \})) \cf0\f0\fs22 // retorna true\par
+\cf2 var.includes(caractere, start]) \cf0 // use includes para ver se existe um valor dentro de var\par
+\cf2\f1\fs18 array.push(elemento1, ..., elementoN) \cf0 // o push adiciona elementos com valores no final do array\par
+\cf2 array.pop() \cf0\f0\fs22 // o pop remove os ultimos elementos do array\par
+\cf2 array.unshift('jooj') \cf0 // adiciona jooj no comeco do array\f1\fs18\par
+\cf2 array. shift('jooj")\cf0\f0\fs22  // remove jooj no inicio do array\par
+\cf2 array.at(0\cf0 ) // pega o primeiro elemento do array, \cf2 array.at(-1) \cf0 // o ultimo, \cf2 .at(-2) \cf0 // penultimo\par
+\fs20 ao criar uma fun\'e7\'e3o dentro de um array, para acessar essa fun\'e7\'e3o: \cf2 console.log(array[0](\cf5 parametro\cf2 )\par
+\fs22 array.splice(2, 1) \cf0 // m\'e9todo splice Remove 1 elemento a partir do \'edndice 2\par
+\cf2 jooj.splice(3,0,1,2,3) \cf0 // \'e9 possivel tambem adicionar elementos a partir de um indice\par
+\cf2 console.log(jooj);  \cf0 // [ 1, 2, 3 ]\par
+\cf4  array1.concat(array2) \cf0 // junta array1 com o array 2\par
+---------------------------------------------------------------------------------------------\par
+
+\pard\sa200\sl240\slmult1\qc\tx1278\ul\b\i\fs24 REDUCE\par
+
+\pard\sa200\sl240\slmult1\tx1278\ulnone\b0\i0\fs22 o Metodo reduce serve para pegar os valores acumulados anteriores ao valor do elemento atual e fazer calculos por exemplo somar todos os valores do array\cf2\f1\par
+\fs18 const numbers = [1, 2, 3, 4, 5];\par
+const sum = numbers.reduce((\cf6 accumulator, valor_atual, indice\cf2 ) => accumulator + valor_atual, 0);\par
+// \cf0 o acumulator \'e9 a soma dos primeros valores do array no caso \'e9:  \cf2 0 + 1, 1 + 2, 3 + 4...\par
+// \cf0 esse zero faz parte da sintaxe, ele \'e9 o valor inicial do acumulador, sempre se usa ap\'f3s a fun\'e7\'e3o\par
+\cf2 console.log(sum); \cf0 // 15\cf2\f0\fs22\par
+
+\pard\sa200\sl276\slmult1\tx1278\cf0 -------------------------------------------------------------------------------------------------------\cf2\par
+
+\pard\sa200\sl276\slmult1\qc\tx1278\cf0\ul\b\i\fs28  edi\'e7\'e3o de texto e de numero\ulnone\b0\i0\fs22\par
+
+\pard\sa200\sl276\slmult1\tx1278\tx4544\cf2 .length() \cf0 : contagem de caracteres ou tamanho do array \par
+
+\pard\sa200\sl276\slmult1\tx1278\cf2 .toUpperCase() \cf0 : deixar maiusculo\par
+\cf2 .toLowerCase(): \cf0 deixar minusculo\par
+\cf2 .toFixed(2): \cf0 casas decimais ap\'f3s a virgula\par
+\cf2 .tofixed(2\cf0 ).replace('.' , ','): substitui o ponto por virgula\par
+\cf2 din.toLocaleString('pt-BR', \{style: 'currency', currency: 'USD', currencyDisplay: 'name'\}) \cf0 :edi\'e7\'e3o de moedas\par
+\cf4 let jooj = /^(\\w)\\1*$/.test('aaaa'); \cf0 // ele verifica se todas letras da str s\'e3o iguais\par
+\cf2 console.log(jooj); \cf0 // true\par
+\cf4 str.substring(startIndex, endIndex); \cf0 // O m\'e9todo substring() \'e9 \'fatil quando voc\'ea quer pegar uma parte espec\'edfica de uma string com base em posi\'e7\'f5es conhecidas!\par
+---------------------------------------------------------------------------------------------------\par
+
+\pard\sa200\sl276\slmult1\qc\tx1278\ul\b\i\fs28 OPERADORES\ulnone\b0\i0\fs22\par
+
+\pard\sa200\sl276\slmult1\tx1278\cf4 5==='5': false , 5===5: true  \cf2 , \cf0 5 tem o mesmo valor e \'e9 do mesmo tipo primitivo? \par
+\cf2 5 !== '5': true , 5 !== 5: false \cf0 ,  5 tem tipos primitivos diferentes? e os valores iguais?\par
+\cf2 ! = nega\'e7\'e3o , && = e , || = ou\cf0 , o \cf2 n\'e3o \cf0 vem 1\'b0 o \cf2 e \cf0 vem 2\'b0 e o \cf2 ou \cf0 o 3\'b0\par
+\cf2 var = valor1 ?? valor2; \cf0 // Se valor1 n\'e3o for null/undefined, retorna valor1. se nao valor 2\par
+o ternario \'e9 um mini se: \cf2 a = (x == 3) ? 13 : 12 \cf0 , entao a recebe 13 senao recebe 12\par
+//nao \'e9 possivel fazer opera\'e7\'f5es dentro do ENT\'c3O e nem do SEN\'c3O do ternario\par
+esses operadores \cf2 >> << \cf0 s\'e3o operadores bitwise(pesquise pra entender) em suma, ao deslocar para a esquerda em \cf2\b 1 \cf0\b0 ele multplica o valor(se aumentar o numero ele multiplicara o resultado anterior) o completo oposto vale para o \cf2 >>.\par
+++n \cf0 pr\'e9 incremento \cf2 n++ \cf0 p\'f3s incremento\par
+no binario o \cf2 0 == false \cf0 e o \cf2 1 == true \par
+Object.is('jooj' ,'jooj')// \cf0 ele compara dois valores determina se eles s\'e3o estritamente iguais.\par
+let obj = \{ name: 'John', age: 30 \};\par
+\cf2 delete obj.age; \cf0 // Remove a propriedade 'age' \cf2\par
+\cf0 operador spread [...] serve para espalhar dados de um array, ex\par
+
+\pard\sa200\sl240\slmult1\tx1278\cf2\f1 const somar = (v1,v2,v3) => \{return v1 + v2 + v3\} \cf0 // arrow function\par
+\cf2 let jooj = [1,2,3] \cf0 // array\par
+\cf2 console.log(somar(...jooj)) \cf0 // retorna 6 , sem o spread ele n\'e3o iria somar\par
+\cf2\fs20 const colecao = [...document.querySelectorAll('div')] \cf0 //tambem \'e9 possivel transformar uma lista em um array usando [...]\par
+\cf2 (rex instanceof Cachorro) \cf0 // o \cf2 instanceof \cf0 verifica se um objeto(array, fun\'e7\'e3o, classe, objetos...) se ele pertence a um conjunto (classe, construtor, objeto), e retorna true ou false\f0\fs22\par
+
+\pard\sa200\sl276\slmult1\tx1278 =====================================================================\par
+
+\pard\sa200\sl276\slmult1\qc\tx1278\ul\b\i\fs28 DOM - (Document Oject Model)\ulnone\b0\i0\fs22\par
+o que \'e9 o DOM? Ele serve para manipular os dados dentro de html\par
+
+\pard\sa200\sl276\slmult1\tx1278\cf2 var d = window.prompt('o que voc\'ea deseja escrever em h1?')\par
+var c = document.querySelector('h1')\cf0  // ao mudar o valor de h1 na pagina o valor da variavel se atualiza\par
+\cf2 c.innerText = d \cf0 // o texto de c recebe d\cf2\par
+document.querySelector('h1').innerText = d \cf0 // ele pega o h1 e muda diretamente seu valor\par
+\cf2 var fundo = window.document.body // \cf0 fundo acessa o body do html \cf2\par
+fundo.style.background = 'red' // \cf0 fundo acessa o style de body e muda a cor do fundo pelo background\par
+\cf2 window.document.body.style.background = 'red' //  \cf0 a mesma coisa\par
+\cf2\f1\fs20 document.querySelectorAll('h1,div')\cf0   // \'e9 possivel selecionar mais de uma tag\par
+\cf2 document.querySelectorAll('div[class]') \cf0 // seleciona as divs que possuem class\par
+\cf2 document.querySelectorAll('div > p'] \cf0 // pega todos os Ps dentro das DIVs\par
+\cf2 document.querySelectorAll('.jooj:not(.selecionados)') \cf0 // pega os elementos que possuem classe .\cf2 jooj \cf0 mas n\'e3o possuem a classe .\cf2 selecionados\cf0\f0\fs22\par
+{{\field{\*\fldinst{HYPERLINK https://abre.ai/kf04 }}{\fldrslt{https://abre.ai/kf04\ul0\cf0}}}}\f0\fs22\lang1046 , <{{\field{\*\fldinst{HYPERLINK "https://abre.ai/kf1d //"}}{\fldrslt{https://abre.ai/kf1d //\ul0\cf0}}}}\f0\fs22 > rela\'e7\'e3o entre elementos DOM(childnode,parentnode..)\f1\fs18\lang22\par
+
+\pard\sa200\sl276\slmult1\tx1278\tx1420\f0\fs22 -----------------------------------------------------------------------------------------------------\cf2\par
+
+\pard\sa200\sl276\slmult1\qc\tx1278\cf0\b\fs24 O \cf3 escolhaCaso \cf0 em js \'e9 o \cf3 switch\cf0 :\cf2\b0\fs22\par
+
+\pard\sa200\sl276\slmult1\tx1278 switch (diaSEM) \{ \cf0 //na express\'e3o se usa a variavel desejada no caso diaSEM\par
+    \cf2 case 0: console.log('Domingo') \par
+    break \cf0 // usar o break \'e9 \b OBRIGATORIO \b0 usar  para pular para o final\par
+
+\pard\sa200\sl240\slmult1\tx1278     \cf2 case 1: case 2: case 3: \cf0 // multiplos resultados\cf2\par
+            console.log('jooj')\par
+    break\par
+
+\pard\sa200\sl276\slmult1\tx1278\cf0     \cf2 default: console.log('S\'e1bado') \cf0 // o Default \'e9 == else ,nao \'e9 obrigado usar\cf2\par
+    break\par
+\} \par
+while()\{\} //\cf0  Enquanto do visualg, e o \cf2 do\{\} while() \cf0 == ao repita no visualg\par
+\cf2 for(var i = 0; i < 10; 1++)\{\} \cf0 // esse \'e9 o para em js\par
+
+\pard\sa200\sl240\slmult1\qc\tx1278\ul\b\i\fs24 diferen\'e7as entre for in e for of\ulnone\b0\i0\fs22\par
+
+\pard\sa200\sl240\slmult1\tx1278\cf2\f1 let num = [10,20,30]\par
+for(var pos in num)\{ console.log(pos) \} \cf0 // l\'ea a posi\'e7\'e3o: 0, 1, 2 e coloca em pos\cf2\par
+for(var j of num)\{ console.log(j) \} \cf0 // l\'ea o conteudo: 10, 20, 30 e coloca em j\par
+\cf2\f0 for(var pos in num)\{ \cf3 console.log(num[pos]) \cf0\} // para cada elemento no array \b num \b0 digite isso, a variavel \b pos \b0 recebe a quantidade de elementos dentro de \b num \b0 ou seja: \cf2 num.length\cf0 , e o for vai repetir a mensagem para cada elemento. \par
+
+\pard\sa200\sl276\slmult1\tx1278 o comando \cf2 break \cf0 para o loop, o \cf2 continue \cf0 n\'e3o executa o lop atual mas executa o seguinte.\cf2\par
+\cf0 -------------------------------------------------------------------------------------------------------\par
+\cf2  var img = document.createElement('img') \cf0 //serve para criar o elemento<img> fora do html mas dentro do js, (talvez seja possivel criar outros elementos)\par
+\cf2  img.setAttribute('id', ' foto') \cf0 // voce pode atribuir algo dentro de img como por exemplo o ID e posteriormente colocar o nome dele, tambem pode mudar o src: \cf2 ('src', 'imagem.png')\par
+img.src = 'manha.png' \cf0 //img.src serve pra acessar o src dentro de img na div pra fazer altera\'e7\'f5es no script\cf2\par
+msg.appendChild(img) \cf0 // o appendchild coloca o elemento criado \b img \b0 dentro da \b div #msg\par
+\cf2\b0 caixa1.remove() \cf0 // remove o elemento caixa1\par
+
+\pard\sa200\sl240\slmult1\tx1278 -------------------------------------------------------------------------------------------------------\par
+
+\pard\sa200\sl240\slmult1\qc\tx1278\ul\b\i\fs28 C\'d3DIGOS\ulnone\b0\i0\fs22\par
+
+\pard\sa200\sl276\slmult1\tx1278\cf2 if(number.indexOf(Number(n1.value)) != -1)\{ \cf0 // se encontrar, retorna a posi\'e7\'e3o do numero\par
+                \cf2 alert('[ERRO] os valores n\'e3o podem se repetir!')\par
+\}\cf0\par
+
+\pard\sa200\sl240\slmult1\tx1278\cf2\f1\fs20 function rest(\cf3 ...valores\cf2 )\{\cf0  //  O  spread me permite adicionar quantos par\'e2metros quiser\par
+\cf2     let res = 0  \par
+    for( j in valores) res += valores[j] \cf0 // soma\par
+\cf2     return res\par
+\}\par
+console.log(rast(1,2,3,4)) \cf0 // resultado: 10\par
+
+\pard\sa200\sl240\slmult1\qc\tx1278\f0\fs22 a op\'e7\'e3o \cf2 once \cf0 serve para determinar que tal evento seja executado apenas uma vez\f1\fs18\par
+
+\pard\sa200\sl240\slmult1\tx1278\cf2 button.addEventListener('click', () => \{\par
+    console.log('Button clicked!');\par
+\}, \{ once: true \}); \cf0\f0\fs22 // ele se usano terceiro parametro do addeventlistener\par
+
+\pard\sa200\sl240\slmult1\qc\tx1278\ul\b\i\fs24 MATRIZ\ulnone\b0\i0\fs22\par
+
+\pard\sa200\sl240\slmult1\tx1278\cf2\f1\fs16 for (let i = 0; i <= tamanho - 1; i++)\{ \cf0 // matrizes em js\par
+\cf2     array[i] = []\par
+    for (let c = 0; c <= tamanho - 1; c++)\{ array[i][c] = 'a' \}\par
+\} \par
+array.map((el) => console.log(el) ) \cf0 // Se o tamanho for 2 resultado \cf2\par
+\cf0 //[ 'a', 'a' ]\par
+//[ 'a', 'a' ]\par
+
+\pard\sa200\sl240\slmult1\qc\tx1278\ul\b\i\f0\fs24 marcador de radios\ulnone\b0\i0\f1\fs16\par
+
+\pard\sa200\sl240\slmult1\tx1278\cf2\f0\fs22 function selecionar(radio1, radio2)\{ \cf0  \cf2\par
+    document.querySelector(radio1).checked = true \cf0 // marca o radio\par
+    \cf2 document.querySelector(radio2).checked = false \cf0 // desmarca o outro\cf2\par
+    \cf7 <!-- <input type="radio" id="normal" checked onclick="selecionar('#normal','#militar')">      Normal <br> --> \cf0 // html\par
+\cf8     \cf7 <!-- <input type="radio" id="militar" onclick="selecionar('#militar','#normal')"> Militar -->\cf0\par
+\}\par
+
+\pard\sa200\sl240\slmult1\qc\tx1278\ul\b\i\fs28  cor aleatoria em RGB\ulnone\b0\i0\fs22\par
+
+\pard\sa200\sl240\slmult1\tx1278       \fs20  \cf2\f5\fs18 this._r = math.floor(math.random() * 255)      \par
+   this._g = math.floor(math.random() * 255) \par
+   this._b = math.floor(math.random() * 255) \par
+
+\pard\sa200\sl240\slmult1\qc\tx1278\cf0\ul\b\i\f0\fs22 NOVA JANELA\ulnone\b0\i0\par
+
+\pard\sa200\sl240\slmult1\tx1278\cf2\f5\fs16 const novaJanela = window.open('', '', 'width=800,height=600');  \cf0 // Abre uma nova janela ou aba\par
+            // Escreve o conte\'fado da tabela na nova janela\par
+            \cf2 novaJanela.document.write(`\par
+                <html>\par
+                    <head>\par
+                        <title>Imprimir Tabela</title>\par
+                    </head>\par
+                    <body>\par
+                        $\{tabela\}\par
+                    </body>\par
+                </html>\par
+            `);\fs18\par
+
+\pard\sa200\sl276\slmult1\tx1278\cf0\f0\fs22 ---------------------------------------------------------------------------------------------------------------\par
+\ul fa\'e7a o pr\'f3ximo curso de html e css basicos\ulnone\par
+regex\par
+node.js\par
+estude clean code assim que voce sentir que e necess\'e1rio \par
+-------------------------------------------------------------------------------------------------------\par
+
+\pard\sa200\sl276\slmult1\qc\tx1278\ul\b\i\fs28 FUN\'c7\'d5ES\ulnone\b0\i0\f1\fs20\par
+
+\pard\sa200\sl240\slmult1\tx1278\cf2 const jooj = function()\{ return "jooj"\} \cf0 // sintaxe da fun\'e7\'e3o an0nima\cf2\par
+\f0\fs22 const jooj = (a, b) => \{ return a + b \}\cf0 // isso \'e9 uma arrow function, simplificando uma fun\'e7\'e3o an\'f4nima que usa o return de um valor ou calculo somente,\par
+OBS, opera\'e7\'f5es simples n\'e3o demanda chaves e nem return. // \cf2 (a, b)=> a + b \f1\fs20\tab\tab\par
+const soma = new Function("v1","v2","return v1 + v2") \cf0 // fun\'e7\'e3o construtor an0nima\cf2\par
+
+\pard\sa200\sl240\slmult1\qc\tx1278\cf0\f0\fs22  a fun\'e7\'e3o geradora funciona como uma fun\'e7\'e3o que possui pausas\par
+
+\pard\sa200\sl240\slmult1\tx1278\cf2\f1\fs20 function* perguntas()\{ \cf0 // use o * ap\'f3s o function\par
+\cf2     const nome = read.question('digite o seu nome: ')\par
+    yield \cf0 // o Yield \'e9 o pausador, primeira pausa \par
+    \cf2 const idade = read.question('digite sua idade: ') // ap\'f3s a primeria pausa\par
+    yield `o seu nome \'e9: $\{nome\} e sua idade \'e8 $\{idade\}` \cf0 // o yield retorna o valor na frente\par
+\}\cf2\par
+
+\pard\sa200\sl240\slmult1\qc\tx1278\cf0\b\f0\fs24 O que \'e9 um Iterador?\b0\fs22\par
+
+\pard\sa200\sl240\slmult1\tx1278 Imagine que voc\'ea tem uma caixa cheia de brinquedos. Um iterador \'e9 como uma m\'e1gica que te d\'e1 um brinquedo de cada vez da caixa, na ordem em que eles est\'e3o. Voc\'ea n\'e3o precisa pegar todos os brinquedos de uma vez, voc\'ea s\'f3 pede o pr\'f3ximo e ele aparece na sua m\'e3o!\par
+\cf2\f1\fs20 const iterador = perguntas() \cf0 // \'e9 necess\'e1rio ter uma vari\'e1vel iterador\par
+\cf2 iterador.next() \cf0 // \'e9 necess\'e1rio usar o next para chamar a fun\'e7\'e3o\par
+\cf2 console.log(iterador.next().value) \cf0 // tr\'e1s o valor da fun\'e7\'e3o\f0\fs22\par
+
+\pard\sa200\sl240\slmult1\qc\tx1278 o m\'e9todo map percorre todo o array e pode ser feitas altera\'e7\'f5es nele ex.\par
+
+\pard\sa200\sl240\slmult1\tx1278\cf2\f1\fs18 let jooj = [1, 2, 3] \cf0 // a variavel original perde seu valor\cf2\par
+for(let c in jooj)  \{ jooj[c]  *=  2  \}\cf0\par
+\cf2 console.log(jooj2) \cf0 // [ 2, 4, 6 ] ambos retornam o mesmo valor\cf3\par
+\f6         \lang1046                    \f2\lang22\u11015?\u-497?\f6  \cf0\f1 //o m\'e9todo map \'e9 uma evolu\'e7\'e3o do for in nessa ocasi\'e3o \par
+\cf2 const array = [1, 2, 3]; \cf0 // esse 1\'b0 n\'e3o ser\'e1 alterado o seu conteudo\par
+\cf2 const \cf9 doubled \cf2 = array.map(num => num * 2); \cf0 // sintaxe, utilize uma fun\'e7\'e3o com retorno\par
+\cf2 console.log(\cf9 doubled\cf2 ) \cf0 // [ 2, 4, 6 ] o map \'e9 melhor\par
+=\par
+\cf2 const jooj1 = [...document.querySelectorAll('.curso')] \cf0 // pega tudo e transforma em array\par
+\cf2 jooj1.map(valor =>console.log(valor)) \cf0 // pega todo o elemento:  \cf2 <div id="jooj">HTML</div>\par
+
+\pard\sa200\sl240\slmult1\qc\tx1278\cf0\b\i\f0\fs22 sintaxe do m\'e9todo filter\b0\i0\f1\fs18\par
+
+\pard\sa200\sl240\slmult1\tx1278\cf2 const idades = [1, 23, 24, 12, 32]\par
+const menorIdade = idades.filter((\cf3 valor, indice, array\cf2 ) => \{ \par
+    return (valor < 18) ? valor : null ) \}\cf0 // filtra os menores de 18\cf2\par
+console.log(menorIdade) \cf0 // [ 1, 12 ]\f0\fs22\par
+====================================================================\par
+A cole\'e7\'e3o \b Map \b0\'e9 como se fosse um array em que ao inv\'e9s de usar numeros como indice para encontrar um valor, voc\'ea pode usar uma chave que pode ser qualquer coisa, para saber, mais procure o seguinte arquivo: C:\\javascript\\curso de js\\anota\'e7\'f5es/MapEWeakMap\par
+=====================================================================\par
+a cole\'e7\'e3o \b Set \b0 serve para adicionar valores como um array porem ele n\'e3o permite valores repetidos, a diferen\'e7a dele para o map \'e9 que ele utiliza indices numerais,para saber mais procure o arquivo: C:\\javascript\\curso de js\\anota\'e7\'f5es/ColecaoSet\par
+======================================================================\par
+
+\pard\sa200\sl240\slmult1\qc\tx1278\ul\b\i\fs28 PROGRAMA\'c7\'c3O ORIENTADA A OBJETOS - POO\ulnone\b0\i0\fs22\par
+
+\pard\sa200\sl240\slmult1\tx1278 Programa\'e7\'e3o Orientada a Objetos (POO) \'e9 um paradigma de programa\'e7\'e3o que organiza o c\'f3digo em torno de "objetos", que s\'e3o inst\'e2ncias de "classes". Em JavaScript, a POO \'e9 amplamente usada para estruturar e organizar c\'f3digo, facilitando o gerenciamento de projetos complexos.\par
+Encapsulamento: atributos podem ser declarados como publico, privado ou protegido, por conven\'e7\'e3o da comunidade sempre se usa _ no inicio de cada atributo(exceto se usado static), a inten\'e7\'e3o e torn\'e1-la privada. Por natureza o atributo se inicia como publico.\par
+\b\fs24 Quando Usar Classes em JavaScript?\b0\fs22\par
+
+\pard 
+{\pntext\f0 1.\tab}{\*\pn\pnlvlbody\pnf0\pnindent0\pnstart1\pndec{\pntxta.}}
+\fi-360\li720\sa200\sl240\slmult1\tx1278 Quando voc\'ea precisa modelar entidades com propriedades e comportamentos, como Pessoa, Carro, ContaBancaria, etc.\par
+
+\pard 
+{\pntext\f0 A.\tab}{\*\pn\pnlvlbody\pnf0\pnindent0\pnstart1\pnucltr{\pntxta.}}
+\fi-360\li720\sa200\sl240\slmult1\tx1278 Em aplica\'e7\'f5es grandes, onde a organiza\'e7\'e3o e a modularidade do c\'f3digo s\'e3o cruciais, classes ajudam a dividir o projeto em partes menores e mais gerenci\'e1veis.\par
+
+\pard\sa200\sl240\slmult1\tx1278\cf2 pessoa1.saudar.call(pessoa2); \cf0 // o \cf2 call \cf0\b\fs24 empresta \b0\fs22 o metodo saudar de pessoa1 a pessoa2\par
+\ul\b\i\fs24 para saber mais: \ulnone\b0\i0\fs22 procure o arquivo: C:\\javascript\\curso de js\\anota\'e7\'f5es\\ClassPOO\par
+
+\pard\sa200\sl240\slmult1\qc\tx1278\ul\b\i\fs28 Objeto Literal\ulnone\b0\i0\fs22\par
+
+\pard\sa200\sl240\slmult1\tx1278 Um objeto literal \'e9 uma maneira simples e direta de criar objetos em JavaScript, usando uma nota\'e7\'e3o de chave-valor. \'c9 usado para armazenar cole\'e7\'f5es de pares de chave-valor e \'e9 especialmente \'fatil para representar uma \'fanica inst\'e2ncia de um objeto. A sintaxe de um objeto literal \'e9 \{ chave1: valor1, chave2: valor2 \}.\par
+\ul\b\i\fs24 para saber mais: \ulnone\b0\i0\fs22 procure o arquivo: C:\\javascript\\curso de js\\anota\'e7\'f5es\\objetosLiterais\par
+
+\pard\sa200\sl240\slmult1\qc\tx1278\ul\b\i\fs28 HERAN\'c7A\ulnone\b0\i0\fs22\par
+Permite que uma fun\'e7\'e3o construtora (classe) herde m\'e9todos e propriedades de outra, estabelecendo uma rela\'e7\'e3o de pai-filho entre os prot\'f3tipos.\par
+
+\pard\sa200\sl240\slmult1\tx1278\ul\b\i\fs24 para saber mais: \ulnone\b0\i0\fs22 procure o arquivo: C:\\javascript\\curso de js\\anota\'e7\'f5es\\HerancaClass\par
+
+\pard\sa200\sl240\slmult1\qc\tx1278\ul\b\i\fs28 PROTOTYPE\par
+\ulnone\i0\fs22 O QUE \'c9 PROTOTYPE? \b0\'e9 um objeto associado a uma fun\'e7\'e3o ou a outro objeto\par
+melhor explica\'e7\'e3o: {{\field{\*\fldinst{HYPERLINK https://youtu.be/UloQBxIdGLU?si=_3tA6-OwHEgCOsbx }}{\fldrslt{https://youtu.be/UloQBxIdGLU?si=_3tA6-OwHEgCOsbx\ul0\cf0}}}}\f0\fs22\par
+\ul\b\i\fs24 para saber mais: \ulnone\b0\i0\fs22 procure o arquivo: C:\\javascript\\curso de js\\anota\'e7\'f5es\\ClassPOO\par
+\ul\b\i\fs32 JSON\ulnone\b0\i0\fs22\par
+
+\pard\sa200\sl240\slmult1\tx1278\ul\b JSON (JavaScript Object Notation) \ulnone\b0\'e9 um formato de texto leve e f\'e1cil de ler para a troca de dados. Ele \'e9 amplamente utilizado em aplica\'e7\'f5es web para enviar e receber dados entre o cliente e o servidor. (\b Ou seja voc\'ea pode transmitir seu objeto para outras linguagens atrav\'e9s do jsom ) \b0 JSON \'e9 baseado em um subconjunto da linguagem de programa\'e7\'e3o JavaScript, mas \'e9 independente de linguagem, o que significa que ela \'e9 universal.\par
+\cf2 const JsonData = JSON.stringify(obj) \cf0 // isso transforma obj em json        \cf2 console.log(JsonData\cf0 ) // \{"name":"Alice","age":30,"isStudent":false,"courses":...             \cf2 const ObjData = JSON.parse(JsonData) \cf0 // isso transforma json e obj          \cf2 console.log(ObjData\cf0 ) // object\par
+\f1\fs12 ============================================================================================================\par
+
+\pard\sa200\sl240\slmult1\qc\tx1278\ul\b\i\f0\fs28 PROMISE\ulnone\b0\i0\fs22\par
+
+\pard\sa200\sl240\slmult1\tx1278 Imagine que voc\'ea pediu para sua m\'e3e fazer um bolo. Ela te diz: "Eu prometo que vou fazer o bolo. Pode demorar um pouco, mas vou fazer." Isso \'e9 como uma Promise em JavaScript.\par
+Uma Promise em JavaScript funciona da mesma maneira. Voc\'ea faz um pedido para o computador (como pedir o bolo) e o computador promete que vai tentar fazer o que voc\'ea pediu. Se der certo, ele te entrega o que voc\'ea queria. Se algo der errado, ele te avisa que n\'e3o conseguiu.\par
+\ul\b\i Quando Usar Promises:\ulnone\b0\i0\fs18\par
+
+\pard{\pntext\f7\'B7\tab}{\*\pn\pnlvlblt\pnf7\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl240\slmult1\tx1278\b\fs20 Requisi\'e7\'f5es HTTP/AJAX\b0 : Quando voc\'ea faz uma requisi\'e7\'e3o a um servidor e precisa esperar pela resposta.\par
+{\pntext\f7\'B7\tab}\b Opera\'e7\'f5es de E/S (Entrada/Sa\'edda): \b0 Como leitura de arquivos, acesso a bancos de dados, etc., onde o resultado n\'e3o \'e9 imediato.\par
+{\pntext\f7\'B7\tab}\b Timeouts e Delays: \b0 Quando voc\'ea precisa esperar um determinado tempo antes de continuar a execu\'e7\'e3o do c\'f3digo.\par
+
+\pard\sa200\sl240\slmult1\tx1278\ul\b\i\fs24 para saber mais: \ulnone\b0\i0\fs22 procure o arquivo: C:\\javascript\\curso de js\\anota\'e7\'f5es\\Promise\par
+------------------------------------------------------------------------------------------------------\par
+
+\pard\sa200\sl240\slmult1\qc\tx1278\ul\b\i\fs28 NAVEGA\'c7\'c3O e WINDOW\cf2\par
+
+\pard\sa200\sl240\slmult1\tx1278\ulnone\b0\i0\fs20 window.location = '{\cf0{\field{\*\fldinst{HYPERLINK https://openai.com }}{\fldrslt{https://openai.com\ul0\cf0}}}}\f0\fs20 ' \cf0 // navega para pagina da openai\par
+\cf2 window.location.replace = '{\cf0{\field{\*\fldinst{HYPERLINK https://openai.com }}{\fldrslt{https://openai.com\ul0\cf0}}}}\f0\fs20 ' \cf0 //  navega e deleta a pagina antiga\par
+\cf2 window.location.assign = '{\cf0{\field{\*\fldinst{HYPERLINK https://openai.com }}{\fldrslt{https://openai.com\ul0\cf0}}}}\f0\fs20 ' \cf0 // navega mas nao deleta pagina antiga\par
+\cf2 window.location.reload() \cf0 // recarrega a pagina\par
+\cf2 window.history \cf0 // permite acessar o historico\par
+\cf2 window.history.forward() \cf0 // vai para a pagina a frente\par
+\cf2 window.history.back() \cf0 // vai para a pagina atras\par
+\cf2 window.history.go(2) \cf0 // navega duas paginas pra frente\par
+\cf2 window.history.go(-2) \cf0 // navega duas paginas pra tras\par
+\cf2 console.log(window.history.length) \cf0 // mostra o tamanho do historico ou quantidade de paginas (eu acho) // 2\par
+\cf2 window.print() \cf0 // faz uma impressao da tela atual\par
+
+\pard\sa200\sl240\slmult1\qc\tx1278\cf3\i\fs22 window.open(URL, windowName, windowFeatures);\b\i0\fs20\par
+
+\pard\sa200\sl240\slmult1\tx1278\cf0 URL (opcional): \b0 Especifica o URL que a nova janela ou aba deve carregar. Se voc\'ea deixar este par\'e2metro em branco (''), ele abrir\'e1 uma janela em branco.\par
+\b windowName (opcional): \b0 Especifica o nome da nova janela ou aba. Esse nome pode ser usado como um identificador para a janela, permitindo que voc\'ea se refira a ela posteriormente. Se voc\'ea abrir uma nova janela com o mesmo nome de uma janela aberta anteriormente, o navegador ir\'e1 reutilizar a janela existente em vez de abrir uma nova.\par
+\b windowFeatures (opcional): \b0 Especifica uma lista de par\'e2metros separados por v\'edrgula que determinam as caracter\'edsticas da nova janela, como tamanho, posi\'e7\'e3o, se a barra de ferramentas ou menu devem estar vis\'edveis, etc. Alguns exemplos:\par
+
+\pard{\pntext\f7\'B7\tab}{\*\pn\pnlvlblt\pnf7\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl240\slmult1\tx1278 width=800,height=600: Define a largura e a altura da nova janela.\par
+{\pntext\f7\'B7\tab}left=100,top=100: Define a posi\'e7\'e3o da nova janela na tela.\par
+{\pntext\f7\'B7\tab}resizable=yes: Permite que a janela seja redimensionada pelo usu\'e1rio.\par
+{\pntext\f7\'B7\tab}scrollbars=yes: Habilita a barra de rolagem.\par
+
+\pard\sa200\sl240\slmult1\tx1278 ====================================================================================\par
+
+\pard\sa200\sl240\slmult1\qc\tx1278\ul\b\i\fs28 MODULARIZA\'c7\'c3O\par
+
+\pard\sa200\sl240\slmult1\tx1278\ulnone\b0\i0\fs20 Modulariza\'e7\'e3o serve para dividir um codigo e colocar seus peda\'e7os em diferentes documentos \par
+\b 1\'ba \b0 precisa colocar o type no documento que vai importar codigos:\par
+
+\pard\sa200\sl240\slmult1\qc\tx1278\cf2\f5 <script src="jooj.js" type="module"></script>\cf0\f0\par
+
+\pard\sa200\sl240\slmult1\tx1278\b  2\'ba \b0 voc\'ea pega o arquivo que voce quer exportar determinado codigo ou ate o codigo todo\par
+
+\pard\sa200\sl240\slmult1\qc\tx1278\cf2\f5 let carros = ['toyota', 'supra' , 'ferrari', 'mercedes']\par
+export \{carros, jooj\}\par
+
+\pard\sa200\sl240\slmult1\tx1278\cf0\b\f0 3\'ba \b0 depois voc\'ea faz um import no arquivo que vai receber esse codigo\par
+
+\pard\sa200\sl240\slmult1\qc\tx1278\cf2\f5 import \{ carros \} from "./carros.mjs";\par
+console.log(carros) //  ['toyota', 'supra' , 'ferrari', 'mercedes']\par
+
+\pard\sa200\sl240\slmult1\tx1278\cf0\b\f0 OBS\b0 : para rodar isso no node ambos os arquivos devem ter .\cf2\b mjs \cf0\b0 e da um \cf2\b node jooj.mjs \cf0\b0 no terminal.\par
+====================================================================================\par
+
+\pard\sa200\sl240\slmult1\qc\tx1278\ul\b\i\fs28 SYMBOLS\par
+
+\pard\sa200\sl240\slmult1\tx1278\ulnone\b0\i0\fs22 Em JavaScript, Symbol \'e9 um tipo de dado primitivo que Permite criar valores \'fanicos e imut\'e1veis que podem ser utilizados como identificadores de propriedades de objetos. os s\'edmbolos s\'e3o \'fanicos e garantem que n\'e3o haja colis\'f5es de nomes, mesmo que dois s\'edmbolos sejam criados com a mesma descri\'e7\'e3o.\cf2\ul\b\i\fs28\par
+\cf0\ulnone\i0\fs22 Para que Serve o Symbol?\b0\fs20\par
+
+\pard{\pntext\f7\'B7\tab}{\*\pn\pnlvlblt\pnf7\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl240\slmult1\tx1278 Prevenir Conflitos de Propriedades: Como cada s\'edmbolo \'e9 \'fanico, us\'e1-los como chaves de propriedade em objetos previne conflitos de nomes, especialmente em grandes sistemas ou bibliotecas onde v\'e1rios desenvolvedores est\'e3o criando e combinando c\'f3digo.\par
+{\pntext\f7\'B7\tab}Definir Constantes \'danicas: Pode ser \'fatil para definir constantes que precisam ser \'fanicas e imut\'e1veis.\par
+{\pntext\f7\'B7\tab}Implementar APIs Privadas: S\'edmbolos podem ser usados para criar propriedades "privadas" em objetos que n\'e3o s\'e3o facilmente acess\'edveis por outras partes do c\'f3digo.\par
+
+\pard\sa200\sl240\slmult1\tx1278\ul\b\i\fs24 para saber mais: \ulnone\b0\i0\fs22 procure o arquivo: C:\\javascript\\curso de js\\anota\'e7\'f5es\\Symbols\par
+\fs20 =================================================================================== \par
+
+\pard\sa200\sl240\slmult1\qc\tx1278\ul\b\i\fs28 RECURSIVIDADE\ulnone\b0\i0\fs20\par
+
+\pard\sa200\sl240\slmult1\tx1278 Recursividade \'e9 um conceito de programa\'e7\'e3o em que uma fun\'e7\'e3o chama a si mesma para resolver um problema. Uma fun\'e7\'e3o recursiva resolve um problema dividindo-o em subproblemas menores e similares at\'e9 atingir um caso base (ou condi\'e7\'e3o de parada), que \'e9 um cen\'e1rio onde a fun\'e7\'e3o n\'e3o faz mais chamadas recursivas e retorna um valor.\par
+\b\fs22 Quando usar Recursividade\b0\fs20\par
+
+\pard{\pntext\f7\'B7\tab}{\*\pn\pnlvlblt\pnf7\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl240\slmult1\tx1278 Quando o problema pode ser naturalmente dividido em subproblemas menores.\par
+{\pntext\f7\'B7\tab}Para problemas como \'e1rvores, grafos, ou sequ\'eancias matem\'e1ticas.\par
+
+\pard\sa200\sl240\slmult1\tx1278 Recursividade \'e9 uma t\'e9cnica poderosa, mas precisa ser usada com cuidado para evitar recurs\'e3o infinita e estouro de pilha de chamadas, garantindo sempre que haja um caso base claro.\par
+\ul\b\i\fs24 para saber mais: {\ulnone\b0\i0\fs22{\field{\*\fldinst{HYPERLINK https://www.youtube.com/watch?v=qUe36p4P2CI }}{\fldrslt{https://www.youtube.com/watch?v=qUe36p4P2CI\ul0\cf0}}}}\ulnone\b0\i0\f0\fs22\par
+=========================================================================\par
+
+\pard\sa200\sl240\slmult1\qc\tx1278\b\i\fs36 ESTRUTURA DE DADOS\b0\i0\fs22\par
+\ul\b\i\fs28 NOTA\'c7\'c3O BIG 0(N)\par
+
+\pard\sa200\sl240\slmult1\tx1278\ulnone\b0\i0\fs20 Ele sere para calcular o tempo de processamento de um codigo \ul\b\i\fs28\par
+\ulnone\i0\fs22 Como calcular a nota\'e7\'e3o Big O:\b0\fs20\par
+\b Identifique a opera\'e7\'e3o dominante: \b0 Analise o algoritmo para encontrar o trecho de c\'f3digo que tem o maior impacto no tempo de execu\'e7\'e3o conforme o tamanho da entrada aumenta.\par
+\b Conte a quantidade de opera\'e7\'f5es: \b0 Para loops, considere quantas vezes o loop \'e9 executado em fun\'e7\'e3o do tamanho da entrada. Se houver loops aninhados, multiplique o n\'famero de itera\'e7\'f5es dos loops.\par
+\b Ignore constantes e termos menores: \b0 Quando se lida com Big O, termos como constantes e termos menores s\'e3o geralmente ignorados porque seu impacto se torna insignificante \'e0 medida que o tamanho da entrada aumenta.\par
+\b Classifique o algoritmo: \b0 Use as informa\'e7\'f5es obtidas para classificar o algoritmo em uma das categorias de Big O listadas acima.\fs22\par
+\fs20 ====================================================================================\par
+
+\pard\sa200\sl240\slmult1\qc\tx1278\ul\b\i\fs28 LISTAS ENCADEADAS \par
+
+\pard\sa200\sl240\slmult1\tx1278\ulnone\b0\i0\fs20 Inser\'e7\'e3o e remo\'e7\'e3o eficientes: Adicionar ou remover elementos de uma lista encadeada \'e9 mais eficiente do que em arrays, especialmente em grandes conjuntos de dados.\par
+\b Situa\'e7\'f5es em que usar:\b0\par
+
+\pard{\pntext\f7\'B7\tab}{\*\pn\pnlvlblt\pnf7\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl240\slmult1\tx1278 Quando voc\'ea precisa de inser\'e7\'f5es/remo\'e7\'f5es r\'e1pidas em qualquer posi\'e7\'e3o da estrutura.\par
+{\pntext\f7\'B7\tab}Quando a realoca\'e7\'e3o de mem\'f3ria de arrays pode ser um problema devido ao tamanho din\'e2mico dos dados.\par
+
+\pard\sa200\sl240\slmult1\tx1278\ul\b\i\fs24 para saber mais: \ulnone\b0\i0\fs22 procure o arquivo: C:\\javascript\\curso de js\\anota\'e7\'f5es\\LinkedList\par
+===========================================================================\par
+
+\pard\sa200\sl240\slmult1\qc\tx1278\b pilhas\b0 : (push/pop, Shift/unshift): ultimo a entrar \'e9 o primerio a sair (LIFO)\par
+\b filas\b0 : (push/Shift, pop/unshift): primeiro a entrar \'e9 o primerio a sair (FIFO)\par
+\ul\b\i\fs28 Programa\'e7\'e3o Din\'e2mica \par
+\ulnone\b0\i0\fs22 Programa\'e7\'e3o din\'e2mica (PD) \'e9 uma t\'e9cnica de otimiza\'e7\'e3o usada para resolver problemas complexos, dividindo-os em subproblemas menores e resolvendo cada subproblema apenas uma vez, armazenando os resultados para evitar c\'e1lculos repetidos.\par
+
+\pard\sa200\sl240\slmult1\tx1278\ul\b\i\fs24 para saber mais: \ulnone\b0\i0\fs22 PLAYLIST -> {{\field{\*\fldinst{HYPERLINK https://youtu.be/74RrAb8jEJg?si=ISuA7A3B_fMjJ7zl }}{\fldrslt{https://youtu.be/74RrAb8jEJg?si=ISuA7A3B_fMjJ7zl\ul0\cf0}}}}\f0\fs22\par
+===========================================================================\par
+
+\pard\sa200\sl240\slmult1\qc\tx1278\ul\b\i\fs28\'c1RVORES \ulnone\b0\i0\fs22\par
+
+\pard\sa200\sl240\slmult1\tx1278 Conceito de arvores: {{\field{\*\fldinst{HYPERLINK https://youtu.be/NpJVZtgSY4U?si=8CwLLEiQ0ACzL1m2 }}{\fldrslt{https://youtu.be/NpJVZtgSY4U?si=8CwLLEiQ0ACzL1m2\ul0\cf0}}}}\f0\fs22\par
+
+\pard\sa200\sl240\slmult1\qc\tx1278\b\fs24 Percurso de Arvore Bin\'e1ria\b0\fs22\par
+\b\i pr\'e9 ordem\b0\i0 : imprime a raiz > todos os n\'f3s a esquerda da raiz > todos os n\'f3s a direita\ul\b\i\fs24\par
+\ulnone\fs22 Em ordem: \b0\i0 imprime todos os n\'f3s a esquerda da raiz > a raiz > todos os n\'f3s a direita\ul\b\i\fs24\par
+\ulnone\fs22 p\'f3s ordem: \b0\i0 imprime todos os n\'f3s a esquerda da raiz >  todos os n\'f3s a direita > a raiz\par
+\ul\b\i\fs24 ARVORE BINARIA DE BUSCA\par
+
+\pard\sa200\sl240\slmult1\tx1278\ulnone\b0\i0\fs22 Uma \'e1rvore bin\'e1ria de busca \'e9 uma \'e1rvore bin\'e1ria especial em que os n\'f3s s\'e3o organizados de acordo com uma regra espec\'edfica: para cada n\'f3, todos os valores na sub\'e1rvore esquerda s\'e3o menores que o valor do n\'f3, e todos os valores na sub\'e1rvore direita s\'e3o maiores. Isso torna a busca por um valor eficiente, j\'e1 que a cada passo a \'e1rvore pode ser dividida pela metade, similar a uma busca bin\'e1ria.\par
+
+\pard\ri-1800\sa200\sl240\slmult1\tx1278\ul\b\i\fs24 para saber mais: \ulnone\b0\i0\fs22 procure o arquivo: C:\\javascript\\curso de js\\anota\'e7\'f5es\\arvoreBinariaDeBusca\par
+
+\pard\ri-1800\sa200\sl240\slmult1\qc\tx1278\ul\b\i\fs24\'c1RVORE AVL\par
+
+\pard\ri-1800\sa200\sl240\slmult1\tx1278\ulnone\b0\i0\fs22 Uma \'e1rvore AVL \'e9 um tipo especial de \'e1rvore bin\'e1ria de busca (BST) que se mant\'e9m balanceada automaticamente. O balanceamento \'e9 garantido atrav\'e9s de uma condi\'e7\'e3o de balanceamento, que exige que a diferen\'e7a de altura entre as sub\'e1rvores esquerda e direita de qualquer n\'f3 seja no m\'e1ximo 1. Para manter essa propriedade, a \'e1rvore AVL realiza rota\'e7\'f5es (simples ou duplas) quando um n\'f3 \'e9 inserido ou removido, de forma a reequilibrar a \'e1rvore. Isso garante que as opera\'e7\'f5es de inser\'e7\'e3o, remo\'e7\'e3o e busca tenham uma complexidade de tempo O(log n).\par
+\ul\b\i\fs24 para saber mais: \ulnone\b0\i0\fs22 procure o arquivo: C:\\javascript\\curso de js\\anota\'e7\'f5es\\arvoreAVL\par
+
+\pard\sa200\sl240\slmult1\tx1278 ===========================================================================\par
+
+\pard\sa200\sl240\slmult1\qc\tx1278\ul\b\i\fs28 REGEXP\par
+
+\pard\sa200\sl240\slmult1\tx1278\ulnone\b0\i0\fs22 Express\'f5es regulares, ou regex (do ingl\'eas regular expressions), s\'e3o sequ\'eancias de caracteres que formam um padr\'e3o de busca. Elas s\'e3o usadas principalmente para a correspond\'eancia e manipula\'e7\'e3o de textos.\par
+Permitem encontrar padr\'f5es espec\'edficos em strings, como palavras, n\'fameros ou formata\'e7\'f5es.\par
+permite tambem formatar strings\par
+\ul\b\i\fs24 para saber mais: \ulnone\b0\i0\fs22 procure o arquivo: C:\\javascript\\curso de js\\anota\'e7\'f5es\\regexp\par
+}
+ 
