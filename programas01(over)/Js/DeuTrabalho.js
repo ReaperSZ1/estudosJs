@@ -11,7 +11,7 @@ for(let i = 0; i < 5; i++){
     idade = Math.floor(Math.random() * 75 + 1)
     média_g += idade
 
-    console.log(`${idade}  ${sexo_r}`)
+    console.log(`idade: ${idade}, sexo:  ${sexo_r}`)
 
     if (sexo_r == 'masc') { 
         média_m += idade 

@@ -19,7 +19,15 @@ console.log(nums); // saida; [1, 2]
 
 import * as valores from './z.mjs' // importa todos os valores em forma de objeto e da um nome a esse obj
 console.log(valores.abc)  // saida: 0
-console.log(valores.numeros);  // saida; [1, 2]
+console.log(valores.numeros);  // saida; [1, 2]]
+
+// common js
+const db = require('./db') // importa o export do arquivo db
+module.exports = Post  // exporta
+module.exports = { // da um nome e exporta
+    seq: seq,
+    sequelize: sequelize
+}
 
 
 

@@ -7,31 +7,38 @@ let cadastrar = ''
 let i = -1 // gambiarra alert
 
 function verif_types (posicao){ // verifica se é numero ou texto
-    if(posicao == 1)
-        if(!isNaN(nome[i])){ // deve ser string, verifique se isso é um number se for execute
-            console.clear()
-            console.log('Você digitou errado! Tente novamente')
-            return true
-        } else {
-            return false
-        }
-    if(posicao == 2)
-        if(isNaN(idade[i])){ // deve ser number, verifique se isso é um string se for execute
-            console.clear()
-            console.log('Você digitou errado! Tente novamente')
-            return true
-        } else {
-            return false
-        }
-    if(posicao == 3) 
-        if( !isNaN(sexo[i])){
-            console.clear()
-            console.log('Você digitou errado! Tente novamente')
-            return true
-        } else {
-            return false 
-        }
+    switch (posicao) {
+        case 1: 
+            if(!isNaN(nome[i])){ // deve ser string, verifique se isso é um number se for execute
+                console.clear()
+                console.log('Você digitou errado! Tente novamente')
+                return true
+            } else {
+                return false
+            }
+        break;
+        case 2: 
+            if(isNaN(idade[i])){ // deve ser number, verifique se isso é um string se for execute
+                console.clear()
+                console.log('Você digitou errado! Tente novamente')
+                return true
+            } else {
+                return false
+            }
+        break;
+        case 3:
+            if( !isNaN(sexo[i])){
+                console.clear()
+                console.log('Você digitou errado! Tente novamente')
+                return true
+            } else {
+                return false 
+            }
+        break;    
+    }
 }
+
+
 
 do{
     console.clear() // limpa a tela
